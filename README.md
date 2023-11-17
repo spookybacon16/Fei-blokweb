@@ -16,14 +16,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Auteur:
-  Sanne 't Hooft (vervangen door jouw naam)
+ Fei Kielema
 
   #### Je startniveau:
   hier je startniveau (kies uit zwart, rood óf blauw)
+Mijn start niveau is blauw, maar ik zou graag proberen om rood te proberen. 
 
   #### Je focus:
   hier je focus (kies uit responsive óf surface plane)
- 
+ Mijn focus 
+
 </details>
 
 
@@ -36,11 +38,14 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor kick-off werkgroep</summary>
 
   ### Je opdracht:
-  link naar de website die je gaat namaken óf de naam/omschrijving van je eigen ontwerp
+  [I'm an inline-style link](https://www.apple.com)
+
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-  hier de naam van de pagina  
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+Mac pagina
+  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="Detail pagina van de Macbooks">
+
+
 
   #### Screenshot(s) van de tweede pagina (small screen):
   hier de naam van de pagina  
@@ -54,9 +59,16 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 <details>
   <summary>uitwerken na test in 2<sup>e</sup> werkgroep</summary>
+Het is belangrijk dat een applicatie toegankelijk is voor verschillende gebruikers. Daarom gingen we tijdens de les experimenteren met VoiceOver, om een idee te krijgen hoe het is voor gebruikers die dit dagelijks moeten gebruiken. 
+
+
+
 
   ### Bevindingen
   Lijst met je bevindingen die in de test naar voren kwamen:
+- Er komt veel op je af.
+- Leest letterlijk <emphasis>alles</emphasis> voor. 
+
 
 </details>
 

@@ -1,11 +1,31 @@
 /**************/
 /* CSS REMEDY */
 /**************/
-*, *::after, *::before {
-  box-sizing:border-box;  
+
+@font-face {
+	font-family: display-semibold;
+	src: url(./font/SF-Pro-Display-Semibold.woff);
 }
 
+@font-face {
+	font-family: text-regular;
+	src: url(./font/SF-Pro-Text-Regular.woff);
+}
 
+@font-face {
+	font-family: text-semibold;
+	src: url(./font/SF-Pro-Text-Semibold.woff);
+}
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+h1 {
+	font-family: display-semibold;
+}
 
 
 
@@ -15,8 +35,8 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text:#111;
-	--color-background:#eee;
+	--color-text: #111;
+	--color-background: #eee;
 }
 
 
@@ -28,4 +48,3 @@
 /****************/
 
 /* jouw code */
-
