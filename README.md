@@ -45,8 +45,8 @@ Mij lijkt het leuk om zelf nog dingen toe te voegen aan de website, zoals dark m
 Mac detail pagina
   <img src="./readme-images/mac-pages/mac-detail-pag.png" width="375px" alt="Detail pagina van de Macbooks">
   <img src="./readme-images/mac-pages/mac-detail-pag2.png" width="375px" alt="Detail pagina van de Macbooks">
-  <img src="./readme-images/mac-pages/mac-detail-pag3mac.png" width="375px" alt="Detail pagina van de Macbooks">
-  <img src="./readme-images/mac-pages/mac-detail-pag4mac.png" width="375px" alt="Detail pagina van de Macbooks">
+  <img src="./readme-images/mac-pages/mac-detail-pag3.png" width="375px" alt="Detail pagina van de Macbooks">
+  <img src="./readme-images/mac-pages/mac-detail-pag4.png" width="375px" alt="Detail pagina van de Macbooks">
 
 
 
@@ -86,7 +86,7 @@ Het is belangrijk dat een applicatie toegankelijk is voor verschillende gebruike
   <img src="./readme-images/apple-breakdown.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
+  <img src="./readme-images/apple-hamburgermenu-breakdown.png" width="375px" alt="breakdown van een dynamisch deel">
 
   ### wellicht nog een dynamisch deel (bijv filter): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van nog een dynamisch deel">
