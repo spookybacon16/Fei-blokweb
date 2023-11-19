@@ -20,11 +20,11 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Je startniveau:
   hier je startniveau (kies uit zwart, rood óf blauw)
-Mijn start niveau is blauw, maar ik zou graag proberen om rood te proberen. 
+Mijn start niveau is blauw, maar ik zou graag willen om rood te proberen. 
 
   #### Je focus:
   hier je focus (kies uit responsive óf surface plane)
- Mijn focus 
+Mij lijkt het leuk om zelf nog dingen toe te voegen aan de website, zoals dark mode of andere interacties. 
 
 </details>
 
@@ -42,8 +42,11 @@ Mijn start niveau is blauw, maar ik zou graag proberen om rood te proberen.
 
 
   #### Screenshot(s) van de eerste pagina (small screen): 
-Mac pagina
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="Detail pagina van de Macbooks">
+Mac detail pagina
+  <img src="./readme-images/mac-pages/mac-detail-pag.png" width="375px" alt="Detail pagina van de Macbooks">
+  <img src="./readme-images/mac-pages/mac-detail-pag2.png" width="375px" alt="Detail pagina van de Macbooks">
+  <img src="./readme-images/mac-pages/mac-detail-pag3mac.png" width="375px" alt="Detail pagina van de Macbooks">
+  <img src="./readme-images/mac-pages/mac-detail-pag4mac.png" width="375px" alt="Detail pagina van de Macbooks">
 
 
 
@@ -65,10 +68,10 @@ Het is belangrijk dat een applicatie toegankelijk is voor verschillende gebruike
 
 
   ### Bevindingen
-  Lijst met je bevindingen die in de test naar voren kwamen:
+  Lijst met je bevindingen die tijdens het testen van de Voice Over naar voren kwamen:
 - Er komt veel op je af.
 - Leest letterlijk <emphasis>alles</emphasis> voor. 
-
+- Begint vanaf bovenaan, wat in sommige gevallen vervelend kan zijn als iemand snel door een pagina wilt scrollen. 
 
 </details>
 
@@ -80,7 +83,7 @@ Het is belangrijk dat een applicatie toegankelijk is voor verschillende gebruike
   <summary>uitwerken na afloop 3<sup>e</sup> werkgroep</summary>
 
   ### de hele pagina: 
-  <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van de hele pagina">
+  <img src="./readme-images/apple-breakdown.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel (bijv menu): 
   <img src="readme-images/dummy-plaatje.jpg" width="375px" alt="breakdown van een dynamisch deel">
