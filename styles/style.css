@@ -27,7 +27,10 @@ h1 {
 	font-family: display-semibold;
 }
 
-
+h2 {
+	font-family: display-semibold;
+	font-size: 28px;
+}
 
 
 /*********************/
