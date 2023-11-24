@@ -23,27 +23,20 @@
 	box-sizing: border-box;
 }
 
-h1 {
-	font-family: display-semibold;
-}
-
-h2 {
-	font-family: display-semibold;
-	font-size: 28px;
-}
-
-
 /*********************/
 /* CUSTOM PROPERTIES */
 /*********************/
 :root {
 	/* startje */
-	--color-text: #111;
+	--color-text: #1d1d1f;
 	--color-background: #eee;
 }
 
 
-
+ul {
+	text-decoration: none;
+	list-style: none;
+}
 
 
 /****************/
@@ -51,3 +44,92 @@ h2 {
 /****************/
 
 /* jouw code */
+
+/* ************************************* HEADER *************************************  */
+
+body header:first-of-type {
+	/* background-color: #fafafc; */
+	background-color: red;
+	letter-spacing: -0.003em;
+	line-height: 1.0834933333;
+
+}
+
+
+h1 {
+	font-family: display-semibold;
+	font-size: 48px;
+	font-weight: 600;
+	color: var(--color-text);
+}
+
+h2 {
+	font-family: display-semibold;
+	font-size: 28px;
+	color: var(--color-text);
+	font-weight: 600;
+	letter-spacing: .007em;
+	line-height: 1.1428571429;
+}
+
+h3 {
+	font-family: display-semibold;
+	font-size: 21px;
+	color: var(--color-text);
+}
+
+h4 {
+	font-family: text-semibold;
+	font-size: 19px;
+	color: var(--color-text);
+}
+
+p {
+	font-family: text-semibold;
+	font-size: 14px;
+	color: var(--color-text);
+}
+
+
+
+
+/* ************************************* Main *************************************  */
+
+.gallery-cards {
+	display: flex;
+}
+
+.gallery-cards h2 {
+	margin-bottom: 80px
+}
+
+
+.card-set {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	gap: 20px;
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+}
+
+/* .card-set h2 {
+	
+} */
+
+.card-set ul {
+	margin-top: 20em;
+
+}
+
+.card-set li {}
+
+
+.card-set li img {
+	/* width: 15em; */
+	width: 260px;
+	/* height: 480px; */
+
+
+	border-radius: 28px;
+}

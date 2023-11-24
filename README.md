@@ -24,7 +24,7 @@ Mijn start niveau is blauw, maar ik zou graag willen om rood te proberen.
 
   #### Je focus:
   hier je focus (kies uit responsive óf surface plane)
-Mij lijkt het leuk om zelf nog dingen toe te voegen aan de website, zoals dark mode of andere interacties. 
+Mij lijkt het leuk om zelf nog dingen toe te voegen aan de website, zoals dark mode of andere kleine interacties. 
 
 </details>
 
@@ -104,6 +104,15 @@ Het is belangrijk dat een applicatie toegankelijk is voor verschillende gebruike
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+ <img src="./readme-images/header-mislukt.png" width="375px" alt="">
+Direct met het beginnen met het CSS bestand deed ze al niet wat ik wilde. Ik probeerde alleen de eerste header een rode achtergrond te geven om voor mezelf duidelijk te maken dat het werkte. In mijn HTML bestand heb ik meerdere headers, omdat ik dit zag bij de orginele website (misschien slim om dit later toch te veranderen naar 1 header, als ik erachter kom dat dit niet mag van de docent). Na meerdere pogingen is het me niet gelukt om dit te kunnen veranderen, dus heb ik het voor nu hierbij gelaten. 
+
+
+ <img src="./readme-images/gallerij.png" width="375px" alt="">
+Ik ben doorgegaan naar het maken van een gallerij foto's die naast elkaar staan. Dit ging echter wel beter en daar ben ik blij om. Ik probeerde het zo eccuraat mogelijk na te maken, maar dat is nog best lastig. 
+
+Ik heb gekozen voor de Apple website, omdat ik mezelf graag wilde uitdagen. Helaas ben ik er achter gekomen dat het een stuk stroever gaat dan ik gehoopt had. Wens me succes.
 
 
   ### Agenda voor meeting
