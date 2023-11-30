@@ -29,7 +29,21 @@
 :root {
 	/* startje */
 	--color-text: #1d1d1f;
+	--color-white: white;
 	--color-background: #eee;
+	--color-greytint: #fafafa;
+	--color-blue: #0071E3;
+
+
+
+	/* ********* Button colors ************ */
+	--button-plus-color: rgb(51, 51, 54);
+
+
+	--button-color-arrow: rgba(0, 0, 0, 0.56);
+	--button-color-paddle-active: rgba(210, 210, 215, 0.64);
+	--button-color-paddle-inactive: rgba(210, 210, 215, 0.64);
+
 }
 
 
@@ -38,6 +52,14 @@ ul {
 	list-style: none;
 }
 
+button {
+	border: none;
+	cursor: pointer;
+}
+
+main>section {
+	padding: .5em;
+}
 
 /****************/
 /* JOUW STYLING */
@@ -47,14 +69,23 @@ ul {
 
 /* ************************************* HEADER *************************************  */
 
+
+
 body header:first-of-type {
 	/* background-color: #fafafc; */
 	background-color: red;
-	letter-spacing: -0.003em;
-	line-height: 1.0834933333;
-
 }
 
+img {
+	max-width: 100%;
+}
+
+a {
+	color: var(--color-blue);
+	text-decoration: none;
+	font-family: text-regular;
+	font-size: 14px;
+}
 
 h1 {
 	font-family: display-semibold;
@@ -65,7 +96,7 @@ h1 {
 
 h2 {
 	font-family: display-semibold;
-	font-size: 28px;
+	font-size: 1.75em;
 	color: var(--color-text);
 	font-weight: 600;
 	letter-spacing: .007em;
@@ -75,7 +106,6 @@ h2 {
 h3 {
 	font-family: display-semibold;
 	font-size: 21px;
-	color: var(--color-text);
 }
 
 h4 {
@@ -87,49 +117,416 @@ h4 {
 p {
 	font-family: text-semibold;
 	font-size: 14px;
-	color: var(--color-text);
 }
+
+
+video {
+	width: 100%;
+	height: 97vh;
+	object-fit: cover;
+	position: relative;
+	border-radius: 1.75em;
+	margin-bottom: 2em;
+}
+
+
+/* ************************************* Navigation *************************************  */
+
+/* bron: https://codepen.io/shooft/pen/KKbwmao */
+.chapternav {
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior: contain auto;
+}
+
+.chapternav-items {
+	display: flex;
+	gap: 2em;
+}
+
+.chapternav-items li {
+	flex-basis: 5em;
+	flex-shrink: 0;
+	align-items: center;
+	/* scroll-snap-align: center; */
+
+	display: grid;
+}
+
+
+.chapternav-items p {
+	font-family: text-regular;
+	font-size: 12px;
+}
+
+.chapternav-items img {
+	width: auto;
+	height: 3.5em;
+}
+
 
 
 
 
 /* ************************************* Main *************************************  */
+/* ***************** Gallery cards ****************  */
 
 .gallery-cards {
 	display: flex;
 }
 
-.gallery-cards h2 {
-	margin-bottom: 80px
+.gallery-cards article {
+	overflow-x: auto;
+	scroll-snap-align: center;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior: contain auto;
 }
 
+
+.gallery-cards h2 {
+	margin: 0 0 1em 0;
+}
+
+
+
+/* ************** Card Sets ************* */
 
 .card-set {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: repeat(7, 1fr);
 	gap: 20px;
+	margin-left: -2em;
+}
+
+
+
+.card-set li {
+	width: 16em;
+	height: 29em;
+	border-radius: 1.75em;
+
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	scroll-snap-align: center;
+
+	padding: 1.6em;
+	display: grid;
+	grid-template-rows: repeat(9, 1fr);
+	grid-template-columns: repeat(5, 1fr);
+
+}
+
+.card-set li h3 {
+	/* 14px */
+	font-size: 1em;
+	grid-column: span 6;
+
+}
+
+.card-set li p {
+	/* 21px */
+	font-size: 1.2em;
+
+	grid-row: 2;
+	grid-column: span 5;
+}
+
+
+/* font color for cards */
+.card-set .white {
+	color: var(--color-white);
+}
+
+.card-set .black {
+	color: var(--color-text);
+}
+
+
+
+.card-set li button {
+	width: 2.7em;
+	height: 2.7em;
+	background-color: var(--button-plus-color);
+	border-radius: 50%;
+
+	grid-column-start: 6;
+	grid-row-start: 10;
+}
+
+
+
+.card-set li:nth-of-type(1) {
+	background-image: url(../images/started/mac_ease__bvgkz2zdltxy_xlarge.jpg);
+}
+
+.card-set li:nth-of-type(2) {
+	background-image: url(../images/started/mac_performance__dh5hyac1zf8m_xlarge.jpg);
+}
+
+.card-set li:nth-of-type(3) {
+	background-image: url(../images/started/mac_iphone__gh1tblkt6bqm_xlarge.jpg);
+}
+
+.card-set li:nth-of-type(4) {
+	background-image: url(../images/started/mac_compatibility__cu59oukz81ci_xlarge.jpg);
+}
+
+.card-set li:nth-of-type(5) {
+	background-image: url(../images/started/mac_security__gfwda10khdym_xlarge.jpg);
+}
+
+.card-set li:nth-of-type(6) {
+	background-image: url(../images/started/mac_durability__epiwcuk7zkeq_xlarge.jpg);
+}
+
+.card-set li:nth-of-type(7) {
+	background-image: url(../images/started/mac_values__c9gck9qi4kia_xlarge.jpg);
+}
+
+
+
+
+
+
+/* ********************************* Paddle Buttons **************************** */
+.card-paddles {
+	display: flex;
+	margin: 2em 0 5em 15em;
+
+}
+
+.card-paddles button {
+	width: 2.7em;
+	height: 2.7em;
+	background-color: var(--button-color-paddle-active);
+	border-radius: 50%;
+}
+
+.card-paddles button:first-of-type {
+	margin-right: 1.3em;
+}
+
+
+/* ********************* blauwe links************************** */
+.blue-links {
+	margin: 3em 0 3em 0;
+
+}
+
+
+.blue-links a:first-of-type {
+	background-color: var(--color-blue);
+	padding: 0.7em 1.1em;
+	border-radius: 8em;
+	color: var(--color-white);
+
+	margin-right: 1em;
+}
+
+
+
+/* ***************************************************** */
+
+
+
+.lineup {
+	background-color: var(--color-greytint);
+}
+
+.lineup h2 {
+	margin: 2.5em 0 .7em 0;
+}
+
+.lineup section {
+	display: flex;
+	overflow-x: auto;
+	scroll-snap-align: center;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior: contain auto;
+}
+
+.lineup li {
+	scroll-snap-align: center;
+
+}
+
+
+/* *********************************** Line up **********************************  */
+/* ************ toggle buttons ************ */
+/* different mac versions */
+
+.toggle-gallery {
+	background-color: white;
+	border-radius: 32em;
+	/* margin: 7vh 0 10vh 0; */
+	margin: 4em 0 3em 0;
+	display: inline-block;
+}
+
+.toggle-gallery button {
+	background-color: var(--color-white);
+	font-size: 0.8em;
+	font-family: text-regular;
+
+	padding: 0.9em 1.5em;
+	border-radius: 8em;
+}
+
+.toggle-gallery button:nth-of-type(1) {
+	background-color: var(--color-text);
+	color: var(--color-white);
+}
+
+
+
+
+/* verhouding van mac foto en stuk tekst */
+.lineup section article {
+	width: 80vw;
+	flex: none;
+}
+
+.lineup article {
+	margin-right: 15vw;
+	margin-left: -2em;
+}
+
+
+/* ruimte tussen mac en kleuren bolletjes */
+.lineup-product img:first-of-type {
+	margin-bottom: 2em;
+}
+
+
+
+/* ********* color of macs ********** */
+.product-tile-colors {
+	display: flex;
+
+	margin: 0 0 3em 0;
+}
+
+.product-tile-colors div {
+	margin-right: .4em;
+}
+
+
+.colours {
+	width: .8em;
+	height: .8em;
+	border-radius: 50%;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.714);
+}
+
+.colours.grey {
+	background-color: #7d7e80;
+}
+
+.colours.silver {
+	background-color: #e3e4e5;
+}
+
+.colours.roze {
+	background-color: #f9d4c2;
+}
+
+.colours.midnight {
+	background-color: #2e3642;
+}
+
+.colours.starlight {
+	background-color: #f0e4d3;
+}
+
+.colours.black {
+	background-color: #2e2c2e;
+}
+
+
+
+
+
+/* ********************************* text Part **************************** */
+span {
+	font-size: 1.3em;
+}
+
+
+.tekst-gedeelte {
+	display: grid;
+	grid-template-rows: repeat(5, 1fr);
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.tekst-gedeelte li:first-of-type {
+	grid-row-start: 1;
+	/* grid-column: span 6; */
+}
+
+.tekst-gedeelte li:nth-of-type(2) {
+	grid-row-start: 2;
+	grid-column: span 2;
+}
+
+.tekst-gedeelte li:nth-of-type(3) {
+	grid-row-start: 3;
+	grid-column: span 2;
+
+}
+
+.tekst-gedeelte li:nth-of-type(4) {
+	grid-row-start: 4;
+}
+
+.tekst-gedeelte li:nth-of-type(5) {
+	grid-row-start: 5;
+}
+
+
+
+
+
+
+
+
+
+
+/* *************************************** Best to Buy *************************** */
+
+.besttobuy {
+	/* display: flex; */
+
+}
+
+.besttobuy ul {
+	display: grid;
+	grid-template-columns: repeat(7, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 1.25em;
 
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
+	overscroll-behavior: contain auto;
+	scroll-snap-align: center;
 }
 
-/* .card-set h2 {
-	
-} */
+.besttobuy li {
+	width: 16.65em;
+	height: 17.9em;
+	padding: 1.5em;
 
-.card-set ul {
-	margin-top: 20em;
-
+	background-color: red;
+	border-radius: 1.75em;
 }
 
-.card-set li {}
+.besttobuy li button {
+	width: 2.7em;
+	height: 2.7em;
+	background-color: var(--button-plus-color);
+	border-radius: 50%;
 
-
-.card-set li img {
-	/* width: 15em; */
-	width: 260px;
-	/* height: 480px; */
-
-
-	border-radius: 28px;
+	/* grid-column-start: 6;
+	grid-row-start: 10; */
 }

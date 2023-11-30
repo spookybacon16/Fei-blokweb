@@ -97,6 +97,7 @@ Het is belangrijk dat een applicatie toegankelijk is voor verschillende gebruike
 
 
 
+
 ## Voortgang 1 (week 2)
 
 <details>
@@ -128,10 +129,9 @@ Ik heb gekozen voor de Apple website, omdat ik mezelf graag wilde uitdagen. Hela
   ### Verslag van meeting
   hier na afloop snel de uitkomsten van de meeting vastleggen
 
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  - Meer letten op de chronologische volgordes van de headers. 
+  - Minder divs proberen te gebruiken.
+  - Minder classes proberen te gebruiken.
 
 </details>
 
@@ -146,7 +146,14 @@ Ik heb gekozen voor de Apple website, omdat ik mezelf graag wilde uitdagen. Hela
 
   ### Stand van zaken
   hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+<img src="./readme-images/goed.png" width="375px" alt="">
+<img src="./readme-images/goet.png" width="375px" alt="">
+Het maken van de nav bar en het collage gedeelde ging goed. Ik ben blij met het eind resultaat. Ik ben blij dat het ook werk. Aan de nav bar moet ik nog veel doen, maar ik ben blij dat ik de basis af heb. 
 
+<img src="./readme-images/bad.png" width="375px" alt="">
+Het gedeelte met de gegevevens van de computers ben ik nog steeds mee bezig. Ik vind het lastig om het helemaal mooi te krijgen. 
+
+Overal vind ik dat het redelijk gaat. Ik moet nadat ik de 1e pagina af heb nog beginnen aan de tweede pagina. Ik oop een klein beetje achter dus wie weet dat ik ga herkansen, maar hopen van niet natuurlijk. 
 
   ### Agenda voor meeting
   samen met je groepje opstellen
