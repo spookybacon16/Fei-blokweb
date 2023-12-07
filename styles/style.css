@@ -3,17 +3,17 @@
 /**************/
 
 @font-face {
-	font-family: display-semibold;
+	font-family: 'display-semibold';
 	src: url(./font/SF-Pro-Display-Semibold.woff);
 }
 
 @font-face {
-	font-family: text-regular;
+	font-family: 'text-regular';
 	src: url(./font/SF-Pro-Text-Regular.woff);
 }
 
 @font-face {
-	font-family: text-semibold;
+	font-family: 'text-semibold';
 	src: url(./font/SF-Pro-Text-Semibold.woff);
 }
 
@@ -28,22 +28,62 @@
 /*********************/
 :root {
 	/* startje */
-	--color-text: #1d1d1f;
-	--color-white: white;
-	--color-background: #eee;
-	--color-greytint: #fafafa;
-	--color-blue: #0071E3;
+	--body-bg: white;
+	--container: white;
+	--container-2: #fafafa;
 
+	--color-text: #1d1d1f;
+	--color-dark-text: #1d1d1f;
+
+
+	--toggle-color: #212124;
+
+
+	--color-blue: #0071E3;
+	--color-greytint: #fafafa;
+	--color-grey-text: #6e6e73;
+
+	--color-white: white;
+
+
+	--color-footer-grey-dark: #f5f5f7;
 
 
 	/* ********* Button colors ************ */
 	--button-plus-color: rgb(51, 51, 54);
 
-
 	--button-color-arrow: rgba(0, 0, 0, 0.56);
 	--button-color-paddle-active: rgba(210, 210, 215, 0.64);
 	--button-color-paddle-inactive: rgba(210, 210, 215, 0.64);
+}
 
+/* DARK MODE*/
+@media (prefers-color-scheme:dark) {
+	:root {
+		--body-bg: #212124;
+		--container: white;
+		--container-2: #464646;
+
+		--toggle-color: #212124;
+
+		--color-text: white;
+		--color-white: #ffffff;
+
+
+
+		--color-greytint: #464646;
+		--color-blue: #0071E3;
+		--color-grey-text: #6e6e73;
+
+		--color-footer-grey-dark: #343434;
+
+	}
+}
+
+
+body {
+	background-color: var(--body-bg);
+	margin: 0;
 }
 
 
@@ -57,9 +97,9 @@ button {
 	cursor: pointer;
 }
 
-main>section {
-	padding: .5em;
-}
+/* main>section {
+	padding-left: 1em;
+} */
 
 /****************/
 /* JOUW STYLING */
@@ -68,13 +108,10 @@ main>section {
 /* jouw code */
 
 /* ************************************* HEADER *************************************  */
-
-
-
-body header:first-of-type {
-	/* background-color: #fafafc; */
-	background-color: red;
+body header {
+	background-color: var(--body-bg);
 }
+
 
 img {
 	max-width: 100%;
@@ -84,13 +121,12 @@ a {
 	color: var(--color-blue);
 	text-decoration: none;
 	font-family: text-regular;
-	font-size: 14px;
+	font-size: 0.875em;
 }
 
 h1 {
 	font-family: display-semibold;
-	font-size: 48px;
-	font-weight: 600;
+	font-size: 3em;
 	color: var(--color-text);
 }
 
@@ -98,27 +134,166 @@ h2 {
 	font-family: display-semibold;
 	font-size: 1.75em;
 	color: var(--color-text);
-	font-weight: 600;
 	letter-spacing: .007em;
 	line-height: 1.1428571429;
 }
 
 h3 {
 	font-family: display-semibold;
-	font-size: 21px;
+	font-size: 1.3125em;
 }
 
 h4 {
 	font-family: text-semibold;
-	font-size: 19px;
+	font-size: 1.1875em;
 	color: var(--color-text);
 }
 
 p {
-	font-family: text-semibold;
-	font-size: 14px;
+	font-family: text-regular;
+	/* font-size: 0.875em; */
 }
 
+
+
+
+/* ****************** Hamburger menu ***************** */
+
+.globalnav ul {
+	position: relative;
+	margin: 0;
+	padding-left: .8em;
+
+	display: flex;
+	gap: 2em;
+	align-items: center;
+}
+
+.globalnav ul li:first-of-type {
+	margin-right: auto;
+}
+
+.globalnav li,
+ul {
+	margin-right: .125em;
+}
+
+
+
+/* ************ streepjes button ************* */
+.streepjes button {
+	display: grid;
+	place-items: center;
+
+	width: 3em;
+	height: 3em;
+	background-color: transparent;
+}
+
+/* lijntjes van button */
+.streepjes button span {
+	grid-row-start: 1;
+	grid-column-start: 1;
+
+	width: 1em;
+	height: .1em;
+	background-color: var(--color-text);
+
+	transition-duration: .5s;
+}
+
+
+.streepjes button span:nth-last-of-type(1) {
+	transform: translateY(-.4em);
+}
+
+.streepjes button span:nth-last-of-type(2) {
+	transform: translateY(.4em);
+}
+
+.streepjes button[aria-expanded="true"] span:nth-of-type(1) {
+	transform: rotate(45deg) scalex(1.25);
+}
+
+.streepjes button[aria-expanded="true"] span:nth-of-type(2) {
+	transform: rotate(-45deg) scalex(1.25);
+}
+
+
+
+/* ************************************* Navigation *************************************  */
+/* andere macbook links */
+/* bron: https://codepen.io/shooft/pen/KKbwmao */
+
+.chapternav {
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior: contain auto;
+}
+
+.chapternav-items {
+	display: flex;
+	gap: 2em;
+	color: var(--color-text);
+}
+
+.chapternav-items li {
+	flex-basis: 5em;
+	flex-shrink: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+
+
+.chapternav-items p {
+	font-family: text-regular;
+	font-size: 0.75em;
+	text-align: center;
+}
+
+.chapternav-items img {
+	width: auto;
+	height: 3.5em;
+}
+
+
+
+/* **************** ribbon ************** */
+header article p {
+	font-family: text-regular;
+
+	text-align: center;
+	background-color: var(--color-greytint);
+	padding: 1em;
+}
+
+header article span {
+	font-size: 0.875em;
+	color: var(--color-blue);
+}
+
+
+
+
+/* ************************************* Main *************************************  */
+
+#eerste-sectie {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+main section h1 {
+	margin: 0;
+
+}
+
+#eerste-sectie p {
+	font-size: 1.3125em;
+	width: 10em;
+	margin: 0 0 3.5em 0;
+	color: var(--color-text);
+}
 
 video {
 	width: 100%;
@@ -130,50 +305,18 @@ video {
 }
 
 
-/* ************************************* Navigation *************************************  */
-
-/* bron: https://codepen.io/shooft/pen/KKbwmao */
-.chapternav {
-	overflow-x: auto;
-	scroll-snap-type: x mandatory;
-	overscroll-behavior: contain auto;
-}
-
-.chapternav-items {
-	display: flex;
-	gap: 2em;
-}
-
-.chapternav-items li {
-	flex-basis: 5em;
-	flex-shrink: 0;
-	align-items: center;
-	/* scroll-snap-align: center; */
-
-	display: grid;
-}
 
 
-.chapternav-items p {
-	font-family: text-regular;
-	font-size: 12px;
-}
-
-.chapternav-items img {
-	width: auto;
-	height: 3.5em;
-}
-
-
-
-
-
-/* ************************************* Main *************************************  */
 /* ***************** Gallery cards ****************  */
 
 .gallery-cards {
-	display: flex;
+	padding-left: 1em;
 }
+
+.gallery-cards h2 {
+	margin-top: 1.5em;
+}
+
 
 .gallery-cards article {
 	overflow-x: auto;
@@ -183,51 +326,54 @@ video {
 }
 
 
-.gallery-cards h2 {
-	margin: 0 0 1em 0;
-}
 
 
 
 /* ************** Card Sets ************* */
-
 .card-set {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
-	gap: 20px;
+	gap: 1.25em;
 	margin-left: -2em;
 }
-
-
 
 .card-set li {
 	width: 16em;
 	height: 29em;
 	border-radius: 1.75em;
 
-
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
 	scroll-snap-align: center;
 
-	padding: 1.6em;
+	padding: 1em;
 	display: grid;
 	grid-template-rows: repeat(9, 1fr);
 	grid-template-columns: repeat(5, 1fr);
 
+
+	transition: .4s ease;
+	transform: scale(1);
 }
 
+.card-set li:hover {
+	transition: .4S ease;
+	transform: scale(1.02);
+}
+
+
 .card-set li h3 {
-	/* 14px */
 	font-size: 1em;
 	grid-column: span 6;
-
+	font-family: 'text-regular';
 }
 
 .card-set li p {
-	/* 21px */
 	font-size: 1.2em;
+	font-family: 'text-semibold';
+	margin: 0;
+
 
 	grid-row: 2;
 	grid-column: span 5;
@@ -235,15 +381,13 @@ video {
 
 
 /* font color for cards */
-.card-set .white {
+.white {
 	color: var(--color-white);
 }
 
-.card-set .black {
-	color: var(--color-text);
+.black {
+	color: var(--color-dark-text);
 }
-
-
 
 .card-set li button {
 	width: 2.7em;
@@ -293,7 +437,7 @@ video {
 /* ********************************* Paddle Buttons **************************** */
 .card-paddles {
 	display: flex;
-	margin: 2em 0 5em 15em;
+	margin: 0em 0 5em 15em;
 
 }
 
@@ -307,6 +451,8 @@ video {
 .card-paddles button:first-of-type {
 	margin-right: 1.3em;
 }
+
+
 
 
 /* ********************* blauwe links************************** */
@@ -329,14 +475,19 @@ video {
 
 /* ***************************************************** */
 
-
-
 .lineup {
 	background-color: var(--color-greytint);
+	padding-left: 1em;
+	padding-top: 2em;
 }
 
+.lineup h3 {
+	color: var(--color-text);
+}
+
+
 .lineup h2 {
-	margin: 2.5em 0 .7em 0;
+	margin-top: 2.5em;
 }
 
 .lineup section {
@@ -349,7 +500,6 @@ video {
 
 .lineup li {
 	scroll-snap-align: center;
-
 }
 
 
@@ -361,7 +511,7 @@ video {
 	background-color: white;
 	border-radius: 32em;
 	/* margin: 7vh 0 10vh 0; */
-	margin: 4em 0 3em 0;
+	margin: 4em 0 4em 0;
 	display: inline-block;
 }
 
@@ -370,12 +520,13 @@ video {
 	font-size: 0.8em;
 	font-family: text-regular;
 
+
 	padding: 0.9em 1.5em;
 	border-radius: 8em;
 }
 
 .toggle-gallery button:nth-of-type(1) {
-	background-color: var(--color-text);
+	background-color: var(--toggle-color);
 	color: var(--color-white);
 }
 
@@ -401,17 +552,17 @@ video {
 
 
 
+
 /* ********* color of macs ********** */
 .product-tile-colors {
 	display: flex;
-
 	margin: 0 0 3em 0;
 }
+
 
 .product-tile-colors div {
 	margin-right: .4em;
 }
-
 
 .colours {
 	width: .8em;
@@ -447,37 +598,67 @@ video {
 
 
 
-
-/* ********************************* text Part **************************** */
-span {
-	font-size: 1.3em;
+/* ********************************* */
+.lineup-product p {
+	font-family: 'text-regular';
+	font-size: 0.875em;
+	color: var(--color-text);
 }
 
+.lineup-product span p {
+	font-size: 0.875em;
+	font-family: 'text-semibold';
+}
+
+
+
+
+
+
+/* ********************************* TEXT GEDEELTE **************************** */
 
 .tekst-gedeelte {
 	display: grid;
-	grid-template-rows: repeat(5, 1fr);
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	grid-template-rows: repeat(5, 20vh);
+	grid-template-columns: 1fr;
+
+	padding-top: 3em;
 }
+
+.tekst-gedeelte li {
+	padding: 0;
+}
+
+
+.tekst-gedeelte li p span {
+	font-size: 21px;
+	font-family: 'text-semibold';
+}
+
+.tekst-gedeelte li p {
+	font-size: 0.75em;
+	color: var(--color-text);
+}
+
+
 
 .tekst-gedeelte li:first-of-type {
 	grid-row-start: 1;
-	/* grid-column: span 6; */
 }
 
 .tekst-gedeelte li:nth-of-type(2) {
 	grid-row-start: 2;
-	grid-column: span 2;
+
 }
 
 .tekst-gedeelte li:nth-of-type(3) {
 	grid-row-start: 3;
-	grid-column: span 2;
 
 }
 
 .tekst-gedeelte li:nth-of-type(4) {
 	grid-row-start: 4;
+
 }
 
 .tekst-gedeelte li:nth-of-type(5) {
@@ -489,22 +670,23 @@ span {
 
 
 
-
-
-
-
 /* *************************************** Best to Buy *************************** */
 
 .besttobuy {
 	/* display: flex; */
-
+	background-color: var(--color-greytint);
+	/* width: 100%; */
 }
+
 
 .besttobuy ul {
 	display: grid;
 	grid-template-columns: repeat(7, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-rows: 1fr;
 	gap: 1.25em;
+
+	padding: 0;
+	margin-top: 2.5em;
 
 	overflow-x: auto;
 	scroll-snap-type: x mandatory;
@@ -512,13 +694,53 @@ span {
 	scroll-snap-align: center;
 }
 
+
+/* is met auto werken goed? */
 .besttobuy li {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+
 	width: 16.65em;
 	height: 17.9em;
 	padding: 1.5em;
 
-	background-color: red;
+	background-color: var(--container);
 	border-radius: 1.75em;
+
+	transition: .4s ease;
+	transform: scale(1);
+
+}
+
+.besttobuy li:hover {
+	transition: .4s ease;
+	transform: scale(1.02);
+}
+
+
+
+.besttobuy h3 {
+	margin: .5em 0 0 0;
+	grid-column-start: span 3;
+}
+
+
+/* als ik de grid weg haal staan ze nog steeds op dezelfde plek??? */
+.besttobuy p {
+	font-size: 0.875em;
+	grid-column-start: 1;
+	grid-row-start: 3;
+}
+
+.besttobuy img {
+	grid-column-start: 1;
+}
+
+.besttobuy button {
+	grid-column-start: 2;
+	grid-row-start: 5;
+
 }
 
 .besttobuy li button {
@@ -526,7 +748,525 @@ span {
 	height: 2.7em;
 	background-color: var(--button-plus-color);
 	border-radius: 50%;
+}
 
-	/* grid-column-start: 6;
-	grid-row-start: 10; */
+.besttobuy li:first-of-type img {
+	width: 3.3em;
+}
+
+.besttobuy li:nth-of-type(5) img {
+	width: 3.3em;
+}
+
+
+
+
+
+
+
+
+/* **************** significant other ************* */
+.significant-others h2 {
+	margin-top: 5.625em;
+}
+
+.significant-others ul {
+	color: var(--color-text);
+	background-color: var(--container-2);
+	margin-top: 4em;
+	border-radius: 1.75em;
+
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	padding: 1.875em;
+}
+
+.significant-others ul p {
+	font-size: 0.875em;
+}
+
+.significant-others ul li:first-child {
+	margin-bottom: 1em;
+}
+
+.significant-others ul li:nth-of-type(2) {
+	border-top: solid .1em;
+	border-bottom: solid .1em;
+	border-color: var(--color-grey-text);
+}
+
+
+
+
+
+
+
+
+
+
+
+/* ***************** mac essentials ****************** */
+.macessentials ul {
+	padding-top: 2em;
+	padding-left: 0;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 1fr;
+
+	overflow-x: auto;
+	scroll-snap-align: center;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior: contain auto;
+	scroll-snap-align: center;
+}
+
+
+
+.macessentials ul li {
+	background-color: var(--container);
+	width: 16em;
+	height: 29em;
+	border-radius: 1.75em;
+	padding: 0;
+
+	position: relative;
+	overflow: hidden;
+}
+
+
+.macessentials ul li:first-of-type {
+	margin-right: 2em;
+}
+
+
+.macessentials ul li div {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	padding: 1em;
+}
+
+
+.macessentials h3 {
+	justify-self: center;
+	/* margin-bottom: 0; */
+
+}
+
+.macessentials p,
+a {
+	text-align: center;
+}
+
+.macessentials img {
+	position: absolute;
+	bottom: 2.5em;
+	left: -2em;
+	transform: scale(1.5);
+
+	max-width: 20em;
+}
+
+.macessentials ul li:nth-of-type(2) img {
+	position: absolute;
+	bottom: .1em;
+	transform: scale(1.1);
+}
+
+
+
+/* *********************************** Footer ******************************** */
+.explore-mac {
+	background-color: var(--container-2);
+
+
+	padding: 1em;
+	width: 100%;
+
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-template-rows: 10vh 1fr 1fr;
+	gap: 1em;
+}
+
+
+
+.explore-mac h2 {
+
+	grid-column-start: 1;
+	grid-row-start: 1;
+}
+
+.explore-mac article:first-of-type {
+	grid-column-start: 1;
+	grid-row-start: 2;
+}
+
+.explore-mac article:nth-of-type(2) {
+	grid-column-start: 1;
+	grid-row-start: 3;
+}
+
+.explore-mac article:nth-of-type(3) {
+	grid-column-start: 2;
+	grid-row-start: 3;
+}
+
+
+
+
+
+
+.explore-mac article h3 {
+	font-size: .75em;
+	color: var(--color-grey-text);
+}
+
+
+.explore-mac ul {
+	padding: 0;
+}
+
+.explore-mac li {
+	margin-bottom: 0.6875em;
+}
+
+.explore-mac li a {
+	color: var(--color-text);
+	font-size: 0.875em;
+	font-family: display-semibold;
+
+}
+
+.explore-mac article:first-of-type ul li a {
+	font-size: 1.3125em;
+}
+
+/* 
+.explore-mac article:first-of-type ul li:nth-of-type(9) {
+	padding-top: 1em;
+	font-size: 0.875em;
+	font-family: text-regular;
+	color: blue;
+}
+
+.explore-mac article:first-of-type ul li:nth-of-type(10) {
+	font-size: 0.875em;
+	font-family: text-regular;
+} */
+
+
+footer {
+	margin-top: 3em;
+	padding-top: 3em;
+
+	background-color: var(--color-footer-grey-dark);
+	font-family: 'text-regular';
+	font-size: 0.75em;
+	color: var(--color-text);
+}
+
+
+footer nav:last-of-type ul {
+	display: flex;
+	justify-content: space-around;
+}
+
+
+
+
+/* ******************* breadcrumbs *************** */
+.breadcrumbs {
+	margin-top: 5em;
+	margin-bottom: 3em;
+}
+
+.breadcrumbs nav ul {
+	display: flex;
+	flex-direction: column;
+
+	padding: 0;
+}
+
+.breadcrumbs nav ul li {
+	border-top: solid .1em;
+	border-bottom: solid .1em;
+
+	padding: 1em;
+	width: 100%;
+
+	border-color: var(--color-grey-text);
+}
+
+
+
+
+
+/* ************************ PAGINA 2 ********************** */
+.hoofd2 {
+	/* position: sticky; */
+	top: 0;
+}
+
+.globalnav.home {
+	background-color: rgb(139, 0, 0);
+}
+
+
+/* ************************** main *********************** */
+
+.main-2 section:first-of-type article {
+	width: auto;
+	height: 31em;
+
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	scroll-snap-align: center;
+}
+
+.main-2 section article h2 {
+	font-size: 2em;
+	padding-top: .5em;
+	margin-bottom: 0;
+	text-align: center;
+
+	color: var(--color-dark-text);
+}
+
+.main-2 section article:nth-of-type(4) h2 {
+	color: var(--color-white);
+}
+
+.main-2 section:first-of-type article p {
+	margin: 0;
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+	font-size: 1.1875em;
+	text-align: center;
+}
+
+.main-2 section:first-of-type article a {
+	display: block;
+	font-size: 1.0625em;
+}
+
+
+.main-2 section:first-of-type article img {
+	display: block;
+	margin: 2em auto 1em auto;
+	padding-top: 1em;
+
+}
+
+
+.main-2 section article div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2em;
+}
+
+/* .main-2 section div a {
+	margin: 0;
+} */
+
+
+
+/* display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center; */
+
+
+
+
+/* begin video apple watch*/
+.main-2 section:first-of-type article:nth-of-type(1) {
+	background-image: url(/images/pagina2/hero_apple_watch_series_9__x5wo4ptz2giu_large.jpg);
+}
+
+/* wonder awaits */
+.main-2 article:nth-of-type(2) {
+	background-image: url(/images/pagina2/holiday_2023_hero__bwga2ol7shci_largetall.jpg);
+}
+
+/* iphone 15 */
+.main-2 article:nth-of-type(3) {
+	background-image: url(/images/pagina2/hero_iphone15_announce__uuemlcwczn6u_largetall.jpg);
+}
+
+/* iphone 15pro */
+.main-2 article:nth-of-type(4) {
+	background-image: url(/images/pagina2/promo_iphone15pro__e48p7n5x3nsm_large.jpg);
+	color: var(--color-white);
+}
+
+/* mac pro */
+.main-2 article:nth-of-type(5) {
+	background-image: url(/images/pagina2/promo_mbp__ek7p477bkp6q_small_2x.jpg);
+
+}
+
+/* apple watch */
+.main-2 article:nth-of-type(6) {
+	background-image: url(/images/pagina2/promo_apple_watch_ultra2_order__dyxqj5ia98om_large.jpg);
+}
+
+/* carbon neutral */
+.main-2 article:nth-of-type(7) {
+	background-image: url(/images/pagina2/promo_carbon_neutral__fmzt9ypcw9e2_large.jpg);
+
+	height: 35em;
+}
+
+/* cards */
+.main-2 article:nth-of-type(8) {
+	background-image: url(/images/pagina2/tile__cauwwcyyn9hy_large.jpg);
+}
+
+/* trade in */
+.main-2 article:nth-of-type(9) {
+	background-image: url(/images/pagina2/promo_iphone_tradein__bugw15ka691e_large.jpg);
+}
+
+
+
+
+
+
+
+/* ********************* Movie gallery **************** */
+.movie-set {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	grid-template-rows: 1fr;
+	margin-left: -2em;
+}
+
+.movies article {
+	overflow-x: auto;
+	scroll-snap-align: center;
+	scroll-snap-type: x mandatory;
+	overscroll-behavior: contain auto;
+
+}
+
+
+
+.movie-set li {
+	width: 17.125em;
+	height: 30.9375em;
+
+	text-align: center;
+
+	/* position: relative; */
+
+	margin-right: 1em;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	scroll-snap-align: center;
+	padding: 1em;
+
+
+	/* display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: repeat(5, 1fr); */
+
+}
+
+.movie-set li h3,
+p {
+	color: var(--color-white);
+}
+
+
+/* .movie-set li img:first-of-type {} */
+
+.movie-set li img:nth-of-type(2) {
+	transform: scale(.7);
+}
+
+.movie-set h3 {
+	font-size: 0.9375em;
+
+	/* margin-top: 16em;
+	margin-bottom: 0; */
+}
+
+.movie-set p {
+
+	margin-top: 0;
+}
+
+
+.movie-set li button {
+	background-color: var(--color-white);
+	/* position: absolute;
+	bottom: 0; */
+
+	margin-bottom: -10em;
+
+	padding: 1em 1.5em;
+
+	border-radius: 61.25em;
+
+	font-size: 0.875em;
+	text-align: center;
+	font-family: 'text-semibold';
+}
+
+
+/* monarch */
+.movie-set li:nth-of-type(1) {
+	background-image: url(/images/pagina2/gallery/monarch-img.jpg);
+}
+
+/* napoleon */
+.movie-set li:nth-of-type(2) {
+	background-image: url(/images/pagina2/gallery/napoleon-img.jpg);
+}
+
+/* slow horses */
+.movie-set li:nth-of-type(3) {
+	background-image: url(/images/pagina2/gallery/slow-horses-img.jpg);
+}
+
+/* for all mankind */
+.movie-set li:nth-of-type(4) {
+	background-image: url(/images/pagina2/gallery/mankind-img.jpg);
+}
+
+/* john lennon */
+.movie-set li:nth-of-type(5) {
+	background-image: url(/images/pagina2/gallery/john-lennon-img.jpg);
+}
+
+/* charlie */
+.movie-set li:nth-of-type(6) {
+	background-image: url(/images/pagina2/gallery/charlie-brown-img.jpg);
+}
+
+/* spirited */
+.movie-set li:nth-of-type(7) {
+	background-image: url(/images/pagina2/gallery/spirited-img.jpg);
+}
+
+/* hannah */
+.movie-set li:nth-of-type(8) {
+	background-image: url(/images/pagina2/gallery/hannah-img.jpg);
+}
+
+/* lessons in chemistry */
+.movie-set li:nth-of-type(9) {
+	background-image: url(/images/pagina2/gallery/lessons-in-chem-img.jpg);
+}
+
+/* messi */
+.movie-set li:nth-of-type(10) {
+	background-image: url(/images/pagina2/gallery/messi-img.jpg);
 }
