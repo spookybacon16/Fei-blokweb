@@ -1516,7 +1516,7 @@ footer ol li {
 
 /* begin apple watch*/
 .main-2 section:first-of-type article:nth-of-type(1) {
-	background-image: url(/images/pagina2/hero_apple_watch_series_9__x5wo4ptz2giu_large.jpg);
+	background-image: url(../images/pagina2/hero_apple_watch_series_9__x5wo4ptz2giu_large.jpg);
 	color: var(--color-text);
 }
 
@@ -1552,7 +1552,7 @@ footer ol li {
 
 /* wonder awaits */
 .main-2 article:nth-of-type(2) {
-	background-image: url(/images/pagina2/holiday_2023_hero__bwga2ol7shci_largetall.jpg);
+	background-image: url(../images/pagina2/holiday_2023_hero__bwga2ol7shci_largetall.jpg);
 
 }
 
@@ -1568,12 +1568,12 @@ footer ol li {
 
 /* iphone 15 */
 .main-2 article:nth-of-type(3) {
-	background-image: url(/images/pagina2/hero_iphone15_announce__uuemlcwczn6u_largetall.jpg);
+	background-image: url(../images/pagina2/hero_iphone15_announce__uuemlcwczn6u_largetall.jpg);
 }
 
 /* iphone 15pro */
 .main-2 article:nth-of-type(4) {
-	background-image: url(/images/pagina2/promo_iphone15pro__e48p7n5x3nsm_large.jpg);
+	background-image: url(../images/pagina2/promo_iphone15pro__e48p7n5x3nsm_large.jpg);
 	color: var(--color-white);
 }
 
@@ -1584,7 +1584,7 @@ footer ol li {
 
 /* mac pro */
 .main-2 article:nth-of-type(5) {
-	background-image: url(/images/pagina2/promo_mbp__ek7p477bkp6q_small_2x.jpg);
+	background-image: url(../images/pagina2/promo_mbp__ek7p477bkp6q_small_2x.jpg);
 
 }
 
@@ -1595,7 +1595,7 @@ footer ol li {
 
 /* carbon neutral */
 .main-2 article:nth-of-type(7) {
-	background-image: url(/images/pagina2/promo_carbon_neutral__fmzt9ypcw9e2_large.jpg);
+	background-image: url(../images/pagina2/promo_carbon_neutral__fmzt9ypcw9e2_large.jpg);
 
 }
 
@@ -1607,7 +1607,7 @@ footer ol li {
 
 /* apple card */
 .main-2 article:nth-of-type(8) {
-	background-image: url(/images/pagina2/tile__cauwwcyyn9hy_large.jpg);
+	background-image: url(../images/pagina2/tile__cauwwcyyn9hy_large.jpg);
 }
 
 .main-2 section:first-of-type article:nth-of-type(8) div:nth-of-type(2) img {
@@ -1624,7 +1624,7 @@ footer ol li {
 
 /* trade in */
 .main-2 article:nth-of-type(9) {
-	background-image: url(/images/pagina2/promo_iphone_tradein__bugw15ka691e_large.jpg);
+	background-image: url(../images/pagina2/promo_iphone_tradein__bugw15ka691e_large.jpg);
 }
 
 .main-2 section:first-of-type article:nth-of-type(9) p {
@@ -1725,48 +1725,48 @@ footer ol li {
 
 /* monarch */
 .movie-set li:nth-of-type(1) {
-	background-image: url(/images/pagina2/gallery/monarch-img.jpg);
+	background-image: url(../images/pagina2/gallery/monarch-img.jpg);
 }
 
 /* napoleon */
 .movie-set li:nth-of-type(2) {
-	background-image: url(/images/pagina2/gallery/napoleon-img.jpg);
+	background-image: url(../images/pagina2/gallery/napoleon-img.jpg);
 }
 
 /* slow horses */
 .movie-set li:nth-of-type(3) {
-	background-image: url(/images/pagina2/gallery/slow-horses-img.jpg);
+	background-image: url(../images/pagina2/gallery/slow-horses-img.jpg);
 }
 
 /* for all mankind */
 .movie-set li:nth-of-type(4) {
-	background-image: url(/images/pagina2/gallery/mankind-img.jpg);
+	background-image: url(../images/pagina2/gallery/mankind-img.jpg);
 }
 
 
 /* john lennon */
 .movie-set li:nth-of-type(5) {
-	background-image: url(/images/pagina2/gallery/john-lennon-img.jpg);
+	background-image: url(../images/pagina2/gallery/john-lennon-img.jpg);
 }
 
 /* charlie */
 .movie-set li:nth-of-type(6) {
-	background-image: url(/images/pagina2/gallery/charlie-brown-img.jpg);
+	background-image: url(../images/pagina2/gallery/charlie-brown-img.jpg);
 }
 
 /* spirited */
 .movie-set li:nth-of-type(7) {
-	background-image: url(/images/pagina2/gallery/spirited-img.jpg);
+	background-image: url(../images/pagina2/gallery/spirited-img.jpg);
 }
 
 /* hannah */
 .movie-set li:nth-of-type(8) {
-	background-image: url(/images/pagina2/gallery/hannah-img.jpg);
+	background-image: url(../images/pagina2/gallery/hannah-img.jpg);
 }
 
 /* lessons in chemistry */
 .movie-set li:nth-of-type(9) {
-	background-image: url(/images/pagina2/gallery/lessons-in-chem-img.jpg);
+	background-image: url(../images/pagina2/gallery/lessons-in-chem-img.jpg);
 	display: flex;
 	flex-direction: column;
 }
@@ -1789,7 +1789,7 @@ footer ol li {
 
 /* messi */
 .movie-set li:nth-of-type(10) {
-	background-image: url(/images/pagina2/gallery/messi-img.jpg);
+	background-image: url(../images/pagina2/gallery/messi-img.jpg);
 }
 
 
